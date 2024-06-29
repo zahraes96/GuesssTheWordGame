@@ -2,6 +2,8 @@ package service;
 
 import Provider.ApplicationContextProvider;
 import iRepository.IClient;
+import model.User;
+
 import java.util.Scanner;
 
 public class ClientServiceImpl implements IClient {
@@ -38,10 +40,10 @@ public class ClientServiceImpl implements IClient {
             System.out.print("Enter your guess: ");
 
             String guess = scanner.nextLine();
-               if ("Esc".equalsIgnoreCase(guess)) {
-                    System.out.println("Exiting game...");
-                    break;
-                }
+            if ("Esc".equalsIgnoreCase(guess)) {
+                System.out.println("Exiting game...");
+                break;
+            }
             char Resguess = guess.charAt(0);
 
             if (GameContex.isCorrectGuess(newdWord, Resguess)) {
@@ -52,7 +54,8 @@ public class ClientServiceImpl implements IClient {
                     }
                 }
                 if (GameContex.isWordGuessed(guessedWord)) {
-                    System.out.println("Congratulations! You've guessed the word!");
+                    User user = new User(name, family);
+                    System.out.println("Congratulations! " + user.getName() + " " + user.getFamily() + " You've guessed the word!");
                     break;
                 }
             } else {

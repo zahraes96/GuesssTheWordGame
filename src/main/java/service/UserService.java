@@ -1,10 +1,5 @@
 package service;
 
-import model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import iRepository.IUser;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

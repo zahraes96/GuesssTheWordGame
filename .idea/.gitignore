@@ -6,3 +6,16 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+/target
+/target/*
+/bin
+/bin/*
+/bin/
+/.settings
+/.settings/*
+.classpath
+.project
+/updates/*
+*.iml
+/.idea
+/.idea/*
